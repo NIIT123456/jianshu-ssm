@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.maxcore.dao.UserDao">
+    <!--增加操作-->
+    <insert id="insertUser" parameterType="com.maxcore.entity.User"
+            keyProperty="id" useGeneratedKeys="true">
+        <!--上一句只对支持主键自增的数据库有用比如mysql-->
+        insert into t_user(account,name,password,email,profile_photo)
+        values(#{account},#{name},#{password},#{email},#{profile_photo})
+    </insert>
+
+    <!--根据user_id删除用户数据信息-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        update t_user set is_delete=1 where id=#{0}
+    </delete>
+
+    <!--修改用户信息-->
+    <update id="updateUser" parameterType="com.maxcore.entity.User">
+        update t_user
+        <trim prefix="set" suffixOverrides=",">
+          <if test="name!=null">
+              name=#{name},
+          </if>
+          <if test="password!=null">
+              password=#{password},
+          </if>
+          <if test="email!=null">
+              email=#{email},
+          </if>
+          <if test="profile_photo!=null">
+              profile_photo=#{profile_photo}
+          </if>
+      </trim>
+        where id=#{id}
+    </update>
+
+    <!--根据user_id获取用户-->
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.maxcore.entity.User">
+        select * from t_user where id=#{0}
+    </select>
+
+    <!--根据account获取用户信息-->
+    <select id="getUserByAccount" parameterType="String" resultType="com.maxcore.entity.User">
+        SELECT * FROM t_user WHERE account=#{0}
+    </select>
+
+    <!--获取用户列表-->
+    <!--resultMap-->
+    <resultMap id="userResultMap" type="com.maxcore.entity.User">
+        <!--对应数据库表中的关键字-->
+        <id property="id" column="id"/>
+        <!--结果映射 property是javabean里的字段，column是数据库的字段-->
+        <result property="account" column="account"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="profile_photo" column="profile_photo"/>
+    </resultMap>
+    <!--使用resultMap作为结果记录集-->
+    <select id="getUserList" resultMap="userResultMap">
+        select * from t_user where is_delete=0
+    </select>
+
+    <!--根据用户名进行分页模糊查询-->
+    <select id="getUsersByNameList" parameterType="java.lang.String"
+            resultType="com.maxcore.entity.User">
+        select *
+        from t_user
+        where name
+        like concat('%',#{name},'%')
+        and is_delete=0
+    </select>
+
+
+</mapper>
