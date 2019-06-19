@@ -50,4 +50,11 @@ ArticleServiceImpl articleServiceImpl;
     {
         System.out.println(articleServiceImpl.addReply(1,2,"评论内容哈哈").toString());
     }
+
+    @Test
+    public void addArticleTest()
+    {
+        String[]imgs=new String[]{"wwww","bbbb"};
+        System.out.println(articleServiceImpl.addArticle(1,"文章内容哈哈2","文章标题2",imgs).toString());
+    }
 }

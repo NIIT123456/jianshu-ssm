@@ -49,4 +49,9 @@ public class ArticleController {
         return articleServiceImpl.addReply(userId, articleId, content);
     }
 
+    @ApiOperation(value = "发布文章")
+    @PostMapping(value = "addArticle")
+    public ResponseResult addArticle(Integer userId, String content, String title,String[]imgs) {
+        return articleServiceImpl.addArticle(userId, content, title,imgs);
+    }
 }

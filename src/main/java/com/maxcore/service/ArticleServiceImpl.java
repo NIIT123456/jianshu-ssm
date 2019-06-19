@@ -146,5 +146,27 @@ private LikeMapper likeMapper;
         return ResponseResult.success(reply);
     }
 
-    
+    public ResponseResult addArticle(Integer userId,String content,String title,String[]imgs)
+    {
+        Article article = new Article();
+        article.setUserId(userId);
+        article.setContent(content);
+        article.setTitle(title);
+        article.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        article.setIsDelete(0);
+        article.setReadNumber(0);
+        int i = articleMapper.insert(article);
+        if (imgs!=null)
+        {
+            for (String img:imgs)
+            {
+                Images images = new Images();
+                images.setArticleId(article.getId());
+                images.setImgUrl(img);
+                imagesMapper.insert(images);
+            }
+
+        }
+        return ResponseResult.success();
+    }
 }
