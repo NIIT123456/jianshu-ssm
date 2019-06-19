@@ -43,6 +43,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath*:/com/maxcore/mapper/*.xml"/>
         <property name="typeAliasesPackage" value="com.maxcore.entity"/>
+        <property name="configLocation" value="mybatis-config.xml"/>
     </bean>
     <!--配置Dao接口所在的包-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

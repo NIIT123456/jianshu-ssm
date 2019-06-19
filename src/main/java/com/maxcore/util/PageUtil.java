@@ -2,6 +2,9 @@ package com.maxcore.util;
 
 import com.maxcore.entity.dto.PageDTO;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class PageUtil {
@@ -21,6 +24,11 @@ public class PageUtil {
             last=listSize;
         }
         return list.subList(first, last);
+    }
+
+    public static String getDateString(Date date) {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return df.format(date);
     }
 
 }

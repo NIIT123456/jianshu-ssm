@@ -43,4 +43,5 @@ public class ResponseResult {
         responseResult.setTotal(total);
         return responseResult;
     }
+
 }

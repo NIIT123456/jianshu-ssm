@@ -32,25 +32,25 @@ import java.util.List;
 @Api(tags = "2.管理员模块")
 @RequestMapping("/admins")
 public class AdminController {
-    @Autowired
-    private AdminDaoServiceImpl adminDaoServiceImpl;
-
-    @ApiOperation(value = "管理员登录")
-    @PostMapping(value = "/signIn")
-    public ResponseResult signIn(String account, String password) throws Exception {
-        return adminDaoServiceImpl.signIn(account, password);
-    }
-
-    @ApiOperation(value = "添加一个管理员")
-    @PostMapping(value = "/register")
-    public ResponseResult register(String account, String name, String password) throws Exception {
-        return adminDaoServiceImpl.addAdmin(account, name, password);
-    }
-
-    @ApiOperation(value = "修改管理员信息")
-    @PostMapping(value = "updateAdminMsg")
-    public ResponseResult updateAdminMsg(Integer id, String name, String password) {
-        return adminDaoServiceImpl.changeAdminMsg(id, name, password);
-    }
+//    @Autowired
+//    private AdminDaoServiceImpl adminDaoServiceImpl;
+//
+//    @ApiOperation(value = "管理员登录")
+//    @PostMapping(value = "/signIn")
+//    public ResponseResult signIn(String account, String password) throws Exception {
+//        return adminDaoServiceImpl.signIn(account, password);
+//    }
+//
+//    @ApiOperation(value = "添加一个管理员")
+//    @PostMapping(value = "/register")
+//    public ResponseResult register(String account, String name, String password) throws Exception {
+//        return adminDaoServiceImpl.addAdmin(account, name, password);
+//    }
+//
+//    @ApiOperation(value = "修改管理员信息")
+//    @PostMapping(value = "updateAdminMsg")
+//    public ResponseResult updateAdminMsg(Integer id, String name, String password) {
+//        return adminDaoServiceImpl.changeAdminMsg(id, name, password);
+//    }
 
 }

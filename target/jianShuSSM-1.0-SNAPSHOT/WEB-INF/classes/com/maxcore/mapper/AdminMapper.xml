@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxcore.dao.AdminMapper">
+    <!--登录功能-->
+    <select id="getByAccPass" resultType="com.maxcore.entity.Admin" parameterType="String">
+        select account from t_admin where account=#{account} and password=#{password}
+    </select>
+    <!--根据账号查询-->
+    <select id="getAdminByAccount" resultType="com.maxcore.entity.Admin">
+        select * from t_admin where account=#{account}
+    </select>
+
+    <insert id="insertAdmin" parameterType="com.maxcore.entity.Admin">
+        insert into t_admin(account,name,password)
+        values (#{account},#{name},#{password})
+    </insert>
+
+    <update id="updateAdmin" parameterType="com.maxcore.entity.Admin">
+        update t_admin
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null">name=#{name},</if>
+            <if test="password!=null">password=#{password}</if>
+        </trim>
+        where id=#{id}
+    </update>
+</mapper>  
