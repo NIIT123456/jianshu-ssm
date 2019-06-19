@@ -15,8 +15,7 @@
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into t_collect (user_id, article_id, status
-      )
+    insert into t_collect (user_id, article_id, status)
     values (#{userId,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}
       )
   </insert>

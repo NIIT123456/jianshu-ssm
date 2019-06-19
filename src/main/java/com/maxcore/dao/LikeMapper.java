@@ -33,6 +33,8 @@ public interface LikeMapper {
 
 //    切换点赞/取消点赞状态
     int checkLikeOrNot(Map<String,Object> map);
+//    切换收藏/取消收藏状态
+    int checkCollectOrNot(Map<String,Object> map);
 
 
 }

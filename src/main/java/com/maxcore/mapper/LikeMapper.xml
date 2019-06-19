@@ -12,10 +12,9 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.maxcore.entity.Like">
-    insert into t_like (id, user_id, article_id, 
-      status)
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER}, 
-      #{status,jdbcType=INTEGER})
+    insert into t_like (id, user_id, article_id,status)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{articleId,jdbcType=INTEGER},
+    #{status})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.maxcore.entity.Like">
     update t_like
@@ -36,6 +35,12 @@
 
   <update id="checkLikeOrNot" parameterType="map" keyProperty="id" useGeneratedKeys="true">
     update t_like set
+      <if test="status lt 1">status=1</if>
+      <if test="status gt 0">status=0</if>
+    where id=#{id}
+  </update>
+  <update id="checkCollectOrNot" parameterType="map" keyProperty="id" useGeneratedKeys="true">
+    update t_collect set
       <if test="status lt 1">status=1</if>
       <if test="status gt 0">status=0</if>
     where id=#{id}

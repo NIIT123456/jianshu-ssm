@@ -7,8 +7,15 @@ public class Like {
 
     private Integer articleId;
 
-    private Integer status;
+    private int status;
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;
@@ -34,13 +41,6 @@ public class Like {
         this.articleId = articleId;
     }
 
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
 
     @Override
     public String toString() {

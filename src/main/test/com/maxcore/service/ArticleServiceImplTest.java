@@ -34,7 +34,14 @@ ArticleServiceImpl articleServiceImpl;
     @Test
     public void checkLikeOrNot()
     {
-        ResponseResult responseResult = articleServiceImpl.likeOrNot(1, 3);
+        ResponseResult responseResult = articleServiceImpl.likeOrNot(4, 3);
+        System.out.println(responseResult.toString());
+    }
+
+    @Test
+    public void checkCollectOrNot()
+    {
+        ResponseResult responseResult = articleServiceImpl.checkCollectOrNot(3, 4);
         System.out.println(responseResult.toString());
     }
 }

@@ -90,6 +90,7 @@ private LikeMapper likeMapper;
             Like lk = new Like();
             lk.setUserId(userId);
             lk.setArticleId(articleId);
+            lk.setStatus(0);
             likeMapper.insert(lk);
             return new ResponseResult(StatusConst.SUCCESS,"已喜欢");
         }
@@ -99,9 +100,37 @@ private LikeMapper likeMapper;
         likeMapper.checkLikeOrNot(map);
         like = likeMapper.selectByPrimaryKey(like.getId());
         if (like.getStatus()==1)
-            return new ResponseResult(StatusConst.SUCCESS,"未喜欢");
+            return new ResponseResult(1,"未喜欢");
         else
             return new ResponseResult(StatusConst.SUCCESS,"已喜欢");
+
+    }
+
+    @Autowired
+    private CollectMapper collectMapper;
+    public ResponseResult checkCollectOrNot(Integer articleId,Integer userId)
+    {
+        if (articleId==null||userId==null)
+            return ResponseResult.error(StatusConst.ERROR, MsgConst.ID_NULL);
+        Collect collect;
+        collect= likeMapper.isHasCollect(userId, articleId);
+        if (collect==null) {
+            Collect coll = new Collect();
+            coll.setUserId(userId);
+            coll.setArticleId(articleId);
+            coll.setStatus(0);
+            collectMapper.insert(coll);
+            return new ResponseResult(StatusConst.SUCCESS,"已收藏");
+        }
+        Map map=new HashMap<>();
+        map.put("status",collect.getStatus());
+        map.put("id",collect.getId());
+        likeMapper.checkCollectOrNot(map);
+        Collect cl = collectMapper.selectByPrimaryKey(collect.getId());
+        if (cl.getStatus()==1)
+            return new ResponseResult(1,"未收藏");
+        else
+            return new ResponseResult(0,"已收藏");
 
     }
 }

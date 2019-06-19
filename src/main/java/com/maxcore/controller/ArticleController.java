@@ -26,7 +26,18 @@ public class ArticleController {
 
     @ApiOperation(value = "文章详情")
     @GetMapping(value = "getArticleDetail")
-    public ResponseResult getArticleDetail(Integer id,Integer userId) throws Exception {
-        return articleServiceImpl.getArticleDetail(id,userId);
+    public ResponseResult getArticleDetail(Integer id, Integer userId) throws Exception {
+        return articleServiceImpl.getArticleDetail(id, userId);
+    }
+
+    @ApiOperation(value = "喜欢/取消喜欢")
+    @GetMapping(value = "checkLikeOrNot")
+    public ResponseResult checkLikeOrNot(Integer articleId, Integer userId) {
+        return articleServiceImpl.likeOrNot(articleId, userId);
+    }
+    @ApiOperation(value = "收藏/取消收藏")
+    @GetMapping(value = "checkCollectOrNot")
+    public ResponseResult checkCollectOrNot(Integer articleId, Integer userId) {
+        return articleServiceImpl.checkCollectOrNot(articleId, userId);
     }
 }
