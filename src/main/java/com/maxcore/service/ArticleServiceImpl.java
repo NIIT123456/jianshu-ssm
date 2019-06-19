@@ -2,12 +2,16 @@ package com.maxcore.service;
 
 import com.maxcore.dao.*;
 import com.maxcore.entity.*;
+import com.maxcore.util.MsgConst;
 import com.maxcore.util.PageUtil;
 import com.maxcore.util.ResponseResult;
+import com.maxcore.util.StatusConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ArticleServiceImpl {
@@ -76,9 +80,28 @@ private LikeMapper likeMapper;
         return ResponseResult.success(article);
     }
 
-//    public ResponseResult likeOrNot(Integer articleId,Integer userId)
-//    {
-//        if (userId==null)
-//            return ResponseResult.error(stat)
-//    }
+    public ResponseResult likeOrNot(Integer articleId,Integer userId)
+    {
+        if (articleId==null||userId==null)
+            return ResponseResult.error(StatusConst.ERROR, MsgConst.ID_NULL);
+        Like like ;
+        like= likeMapper.isHasLike(userId, articleId);
+        if (like==null) {
+            Like lk = new Like();
+            lk.setUserId(userId);
+            lk.setArticleId(articleId);
+            likeMapper.insert(lk);
+            return new ResponseResult(StatusConst.SUCCESS,"已喜欢");
+        }
+        Map map=new HashMap<>();
+        map.put("status",like.getStatus());
+        map.put("id",like.getId());
+        likeMapper.checkLikeOrNot(map);
+        like = likeMapper.selectByPrimaryKey(like.getId());
+        if (like.getStatus()==1)
+            return new ResponseResult(StatusConst.SUCCESS,"未喜欢");
+        else
+            return new ResponseResult(StatusConst.SUCCESS,"已喜欢");
+
+    }
 }

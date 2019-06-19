@@ -1,6 +1,8 @@
 package com.maxcore.util;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 封装统一的响应体
@@ -8,6 +10,8 @@ import lombok.Data;
  * 不需要返回数据时调用前者, 需要返回数据时调用后者
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ResponseResult {
     private int code;
     private String msg;
@@ -44,4 +48,8 @@ public class ResponseResult {
         return responseResult;
     }
 
+    public ResponseResult(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
 }

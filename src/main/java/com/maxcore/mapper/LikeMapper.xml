@@ -34,4 +34,11 @@
     from t_like
   </select>
 
+  <update id="checkLikeOrNot" parameterType="map" keyProperty="id" useGeneratedKeys="true">
+    update t_like set
+      <if test="status lt 1">status=1</if>
+      <if test="status gt 0">status=0</if>
+    where id=#{id}
+  </update>
+
 </mapper>
