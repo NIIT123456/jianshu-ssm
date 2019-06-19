@@ -10,15 +10,8 @@
     <list default="true" id="f43d496f-7477-4fce-b1f0-a94b189a7a45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/logs/my_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/dao/LikeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/dao/LikeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/entity/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/entity/Like.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/CollectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/CollectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/LikeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/LikeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maxcore/service/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maxcore/service/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/maxcore/controller/ArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/maxcore/dao/LikeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/maxcore/service/ArticleServiceImpl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+            <state relative-caret-position="152">
+              <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -83,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/service/ArticleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="93" column="34" lean-forward="true" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+            <state relative-caret-position="503">
+              <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+            <state relative-caret-position="380">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,12 +211,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/entity/Reply.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/util/ResponseResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/dao/LikeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/entity/Like.java" />
-        <option value="$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/CollectMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/mapper/LikeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxcore/service/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java" />
       </list>
     </option>
   </component>
@@ -484,7 +477,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleServiceImplTest.checkLikeOrNot">
+  <component name="RunManager" selected="JUnit.ArticleServiceImplTest.addReplyTest">
+    <configuration name="ArticleServiceImplTest.addReplyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jianShuSSM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maxcore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.maxcore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.maxcore.service.ArticleServiceImplTest" />
+      <option name="METHOD_NAME" value="addReplyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ArticleServiceImplTest.checkCollectOrNot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jianShuSSM" />
       <extension name="coverage">
@@ -544,22 +553,6 @@
       <option name="PACKAGE_NAME" value="com.maxcore.service" />
       <option name="MAIN_CLASS_NAME" value="com.maxcore.service.ArticleServiceImplTest" />
       <option name="METHOD_NAME" value="getArticleDetail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoServiceImplTest.isLikeOrCollectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jianShuSSM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.maxcore.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.maxcore.service" />
-      <option name="MAIN_CLASS_NAME" value="com.maxcore.service.UserDaoServiceImplTest" />
-      <option name="METHOD_NAME" value="isLikeOrCollectTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -645,11 +638,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArticleServiceImplTest.addReplyTest" />
         <item itemvalue="JUnit.ArticleServiceImplTest.checkLikeOrNot" />
         <item itemvalue="JUnit.ArticleServiceImplTest.checkCollectOrNot" />
         <item itemvalue="JUnit.ArticleServiceImplTest.checkLikeTest" />
         <item itemvalue="JUnit.ArticleServiceImplTest.getArticleDetail" />
-        <item itemvalue="JUnit.UserDaoServiceImplTest.isLikeOrCollectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -671,26 +664,11 @@
       <workItem from="1560520367952" duration="30472000" />
       <workItem from="1560731382272" duration="20157000" />
       <workItem from="1560835391390" duration="24059000" />
-      <workItem from="1560901174580" duration="34426000" />
+      <workItem from="1560901174580" duration="35470000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArticleServiceImplTest_checkLikeOrNot - 2019.06.19 at 21h 59m 43s.xml">
-      <configuration name="ArticleServiceImplTest.checkLikeOrNot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleServiceImplTest_checkLikeOrNot - 2019.06.19 at 22h 00m 26s.xml">
-      <configuration name="ArticleServiceImplTest.checkLikeOrNot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleServiceImplTest_checkLikeOrNot - 2019.06.19 at 22h 01m 18s.xml">
-      <configuration name="ArticleServiceImplTest.checkLikeOrNot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 20m 02s.xml">
-      <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 20m 48s.xml">
-      <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 27m 57s.xml">
       <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
     </history-entry>
@@ -706,12 +684,28 @@
     <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 45m 10s.xml">
       <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 54m 39s.xml">
+      <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 55m 02s.xml">
+      <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticleServiceImplTest_checkCollectOrNot - 2019.06.19 at 22h 55m 35s.xml">
+      <configuration name="ArticleServiceImplTest.checkCollectOrNot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticleServiceImplTest_checkLikeOrNot - 2019.06.19 at 22h 56m 20s.xml">
+      <configuration name="ArticleServiceImplTest.checkLikeOrNot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticleServiceImplTest_addReplyTest - 2019.06.19 at 23h 09m 44s.xml">
+      <configuration name="ArticleServiceImplTest.addReplyTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136096000" />
+    <option name="totallyTimeSpent" value="137140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3941019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1166,16 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/entity/Like.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1186,13 +1170,6 @@
             <element signature="e#198#199#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1217,10 +1194,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/maxcore/service/ArticleServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxcore/service/ArticleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="93" column="34" lean-forward="true" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        <state relative-caret-position="503">
+          <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

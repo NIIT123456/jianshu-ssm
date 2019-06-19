@@ -44,4 +44,10 @@ ArticleServiceImpl articleServiceImpl;
         ResponseResult responseResult = articleServiceImpl.checkCollectOrNot(3, 4);
         System.out.println(responseResult.toString());
     }
+
+    @Test
+    public void addReplyTest()
+    {
+        System.out.println(articleServiceImpl.addReply(1,2,"评论内容哈哈").toString());
+    }
 }

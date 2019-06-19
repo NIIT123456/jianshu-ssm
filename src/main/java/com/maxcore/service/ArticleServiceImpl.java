@@ -9,6 +9,7 @@ import com.maxcore.util.StatusConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -131,6 +132,19 @@ private LikeMapper likeMapper;
             return new ResponseResult(1,"未收藏");
         else
             return new ResponseResult(0,"已收藏");
-
     }
+
+    public ResponseResult addReply(Integer userId,Integer articleId,String content)
+    {
+        Reply reply = new Reply();
+        reply.setUserId(userId);
+        reply.setArticleId(articleId);
+        reply.setContent(content);
+        reply.setIsDelete(0);
+        reply.setReplyTime(new Timestamp(System.currentTimeMillis()));
+        replyMapper.insert(reply);
+        return ResponseResult.success(reply);
+    }
+
+    
 }
