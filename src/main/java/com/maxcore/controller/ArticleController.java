@@ -51,7 +51,13 @@ public class ArticleController {
 
     @ApiOperation(value = "发布文章")
     @PostMapping(value = "addArticle")
-    public ResponseResult addArticle(Integer userId, String content, String title,String[]imgs) {
-        return articleServiceImpl.addArticle(userId, content, title,imgs);
+    public ResponseResult addArticle(Integer userId, String content, String title, String[] imgs) {
+        return articleServiceImpl.addArticle(userId, content, title, imgs);
+    }
+
+    @ApiOperation(value = "删除文章")
+    @GetMapping(value = "delArticle")
+    public ResponseResult delArticle(Integer id) {
+        return articleServiceImpl.delArticle(id);
     }
 }

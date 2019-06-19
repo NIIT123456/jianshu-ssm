@@ -11,7 +11,8 @@
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from t_article
+    update  t_article
+    set is_delete=1
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.maxcore.entity.Article" useGeneratedKeys="true"

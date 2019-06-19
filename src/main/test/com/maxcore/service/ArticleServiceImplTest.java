@@ -57,4 +57,10 @@ ArticleServiceImpl articleServiceImpl;
         String[]imgs=new String[]{"wwww","bbbb"};
         System.out.println(articleServiceImpl.addArticle(1,"文章内容哈哈2","文章标题2",imgs).toString());
     }
+
+    @Test
+    public void delArticleTest()
+    {
+        System.out.println(articleServiceImpl.delArticle(1));
+    }
 }

@@ -169,4 +169,12 @@ private LikeMapper likeMapper;
         }
         return ResponseResult.success();
     }
+
+    public ResponseResult delArticle(Integer id)
+    {
+        if (id==null)
+            return ResponseResult.error(StatusConst.ERROR,MsgConst.ID_NULL);
+        articleMapper.deleteByPrimaryKey(id);
+        return ResponseResult.success();
+    }
 }
